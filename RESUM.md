@@ -42,3 +42,6 @@ comentaris/conclusions
     * volen inspirar confiança sobretot i anys d'experiencia
     
     * colors blaus, seriosos, mai grocs
+    
+    telf: &#xf095;
+    map: &#xf279; &#xf041; &#xf278;
