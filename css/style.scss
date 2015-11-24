@@ -8,11 +8,39 @@ $main-hover: #f4f4f4; //gris
 /* Extra small devices (phones, less than 768px) */
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+    .top-header {
+        // visibility: hidden;
+        display: none;
+    }
+    
+    .main-banner {
+        // http://getbootstrap.com/css/#images-responsive
+        height: 200px;
+        h1 {
+            color: orange;
+            text-shadow: 2px 2px black;
+            text-align: center;
+            padding-top: 60px!important;
+            
+        }
+    }
+    
     .wrapper {
         padding: 0 10px !important;
         margin-right: auto;
         margin-left: auto;
     }
+    .sectores {
+        .fa {
+            font-size: 3em!important;
+        }
+        .container:hover {
+            &:hover {
+                transform: rotateY(0deg);
+            }
+        }
+    }
+    
 }
 
 /*--------------------- Small devices (tablets, 768px and up) --------------------*/
@@ -20,6 +48,8 @@ $main-hover: #f4f4f4; //gris
     .wrapper {
         width: 750px;
     }
+    
+    
 }
 
 /*--------------------- Medium devices (desktops, 992px and up) --------------------*/
@@ -27,11 +57,25 @@ $main-hover: #f4f4f4; //gris
     .wrapper {
         width: 970px;
     }
+    .proyectos {
+        border: 3px solid red;
+        figure {
+            margin: 1em auto!important;
+        }
+    }
 }
 
 /*--------------------- Large devices (large desktops, 1200px and up) ---------------*/
 @media (min-width: 1200px) {
     
+}
+
+.m0 {
+    margin: 0px;
+}
+
+.p0 {
+     padding: 0px;   
 }
 
 h1{
@@ -41,8 +85,9 @@ h1{
 
 
 body {
+    margin: 0;
+    padding: 0;
     
-  
 .wrapper {
     position: relative;
     margin-left: auto;
@@ -51,68 +96,100 @@ body {
     
 header {
     font-family: 'Open Sans', sans-serif;
-    border: 2px solid red;
+    // border: 2px solid red;
     /*-------------------------------top-header ------------------------------------*/
+    img#logo {
+        // width: 120px;
+        width: 150px;
+    }
     .top-header {
         background: color;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
         .wrapper {
-            border: 1px solid red;
-            
+            // border: 1px solid;
             ul.navmenu {
-                border: 1px solid blue;
+                // border: 1px solid red;
+                position: absolute;
+                height: 100%;
+                top: 7px;
+                padding: 0;
+                right: 0;
                 li {
                     list-style-type: none;
-                    outline: 1px solid red;
                     width: 125px;
                     text-align: center;
                     position: relative; //important
                     display: inline-block;
-                    margin-right: 1px;
+                    margin-left: -4px;
+                    height: 100%;
+                    top: 0px;
                     a {
                         text-decoration: none;
                         display: block;
                         width: 125px;
-                        height: 25px;
-                        line-height: 25px;
+                        line-height: 58px;
                         background-color: #FFF;
-                        border: 1px solid #CCC;
+                        height: 100%;
+                        font-weight: 600;
+                        
+                        &:hover {
+                            border-bottom: 3px solid orange;
+                        }
                     }
                     ul.sub1 {
-                        //
                         display: none;
                         position: absolute;
+                        margin-left: -37px;
+                        a {
+                            padding: 0.5em 0em;
+                            &:hover {
+                                background-color: $main-hover;
+                            } 
+                        }
                     }
                     ul.sub2 {
                         display: none;
                         position: absolute;
-                        margin-left: 126px;
-                        margin-top: -27px;
+                        margin-left: -37px;
+                        a {
+                            padding: 0.5em 0em;
+                            &:hover {
+                                background-color: $main-hover;
+                            } 
+                        }
                     }
-                    
-                    &:hover a:hover {
-                        background-color: yellow;
+                }
+                li#home{
+                    background: #ff0000;
+                    width: 3.5em;
+                   a {
+                        width: 3.5em!important;
                     }
-                    
-                    &:hover > a {
-                        background-color: green;
-                    } 
-                    
                 }
             }
             
-            /* Si fem hover en un li dintre del ul dintre de navmenu, aplica el
-            estil a la ul.sub1 si te */
+            /* Si fem hover en un li dintre del ul dins de navmenu, aplica 
+            l'estil a la ul.sub1 si te */
             ul.navmenu li:hover ul.sub1 {
+                display: block;
+                z-index: 1;
+            }
+            ul.navmenu li:hover ul.sub2 {
                 display: block;
                 z-index: 1;
             }
         }
     }
+    .fa-home {
+        font-size: 1.5em;
+    }
     /*-------------------------------info-header------------------------------------*/
     .info-header {
         background: $main-color;
         .wrapper {
-            border: 2px solid red;
+            // border: 2px solid red;
+            padding: 5px 0px 5px 0px;
         }
         
         .right a {
@@ -124,16 +201,20 @@ header {
             &:hover {
                 color: #FF8C00;
             }
+            i {
+                padding-right: 5px;
+            }
         }
     }
 }
 
 /*-------------------------------aside------------------------------------*/
 aside {
-    background-color: $main-color;
+    background-color: $main-color - 50;
     position: fixed;
     left: 0px;
     top: 35%;
+    z-index: 1;
     
     a {
         padding: 5px;
@@ -148,128 +229,261 @@ aside {
         }
     }
 }
+
+/*-------------------------------main-banner------------------------------*/
+.main-banner {
+    // http://getbootstrap.com/css/#images-responsive
+    width: 100%;
+    max-height: 400px;
+    background-image: url("../images/banner1.jpg");
+    h1 {
+        color: orange;
+        text-shadow: 2px 2px black;
+        text-align: center;
+        padding-top: 130px!important;
+        
+    }
+}
     
-    .main-banner {
+/*-------------------------------sectors----------------------------------*/
+.sectores {
+    // border: 1px solid orange;
+    background-color: $main-color;
+    .wrapper {
+        // border: 1px solid!important;
+    }
+    
+    .row {
+        // border: 1px solid red;
+    }
+
+    .col-xs-12,  .col-sm-4 {
+        // border: 1px solid green;
+    }
+
+    .container {
+        position: relative;
+        // width: 260px;
+        width: 80%;
+        margin: 1em auto;
+        padding: 0;
+        // transition: transform 1s ease;
+        -webkit-transition: transform 1s ease;
+        -moz-transition: transform 1s ease;
+        -ms-transition: transform 1s ease;
+        -o-transition: transform 1s ease;
+        transition: transform 1s ease;
+        
+        // transform-style: preserve-3d; //important
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    
+    .back-face {
+        // position: absolute;
         width: 100%;
-        height: 300px;
-        background-image: url("/images/banner1.jpg");
-        h1 {
-            text-color: $main-color;
+        margin: 0;
+        padding: 0;
+        background: $main-color;
+        // transition: transform;
+        -webkit-transition: transform;
+        -moz-transition: transform;
+        -ms-transition: transform;
+        -o-transition: transform;
+        transition: transform;
+        
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        // transform: rotateY(180deg);
+        
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        
+        // backface-visibility: hidden;
+        color: #ffffff;
+        padding-bottom: 5px;
+        a {
+            text-decoration: none;
+        }
+        p {
+            position: relative;
             text-align: center;
-            padding-top: 130px !important;
+            font-size: 13px;
+            line-height: 20px;
+            padding-top: 5px;
+            color: #ffffff;
+        }
+        h4 {
+             text-align: center;
+             bottom: 0;
+             margin: 5px auto;
+             width: 55%;
+             border-radius: 3px;
+             color: #ffffff;
+             padding: 8px;
+             text-transform: uppercase;
+             font-weight: 600;
+             font-size: 13px;
+             box-shadow: 0px 2px 1px #000;
+             background: #FF8C00;
             
+             &:hover {
+                // background: $main-color - 20; 
+                background: #FF8C00 - 20;
+             }
         }
     }
+    
+    .front-face {
+        position: absolute;
+        display: table;
+        width: 100%;
+        height: 100%;
+        // border: 1px solid;
+        margin: 0;
+        padding: 0;
+        // backface-visibility: hidden;
+        padding-bottom: 5px;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
         
-    
-    .sectores {
-        border: 1px solid orange;
+        .fa {
+            font-size: 5em;
+            margin-top: 0.2em;
+            text-align: center;
+            display: block;
+            color: #FF8C00;
+            text-shadow: 1px 1px 1px #000;
+        }
+        
+        h4 {
+            text-align: center;
+            color: #ffffff;
+            margin-top: 15px;
+        }
     }
-    
-    .proyectos {
-        border: 1px solid red;
+    &:hover {
+        transform: rotateY(180deg);
     }
-    
-    footer {
-        border: 1px solid purple;
-    }
-    /* CSS */
-    
-    
-    
+}// container
+}//sectores
 
+/*-------------------------------proyectos--------------------------------*/
+.proyectos {
+    border: 1px solid red;
+    .wrapper {
+        border: 1px solid!important;
+    }
+    .row {
+        border: 1px solid red;
+        margin: 0;
+        padding: 0;
+    }
+    .col-xs-12, .col-xs-6, .col-sm-3 {
+        border: 1px solid green;
+    }
+    
+    figure {
+        outline: 1px solid;
+        margin: 1em auto;
+        display: block;
+        height: 220px;
+        width: 200px;
+        overflow: hidden;
+    img {
+        -webkit-transition: 0.6s ease;
+        -moz-transition: 0.6s ease;
+        -ms-transition: 0.6s ease;
+        -ms-transition: 0.6s ease;
+        -o-transition: 0.6s ease;
+        -o-transition: 0.6s ease;
+        transition: 0.6s ease;
+        transition: 0.6s ease;
+        height: 220px;
+        width: 200px;
+    }
+    figcaption {
+        background-color: rgba(0, 82, 153, 0.59);
+        -webkit-transition: 0.6s ease;
+        -moz-transition: 0.6s ease;
+        -ms-transition: 0.6s ease;
+        -o-transition: 0.6s ease;
+        transition: 0.6s ease;
+        padding: 0.5em;
+            span {
+                // font-family: $font-family;
+                font-weight: bold;
+                font-size: 2rem;
+                color: #fff;
+            }
+    }
+    &:hover {
+        figcaption {
+            -webkit-transform: translateY(-7em);
+            -moz-transform: translateY(-7em);
+            -ms-transform: translateY(-7em);
+            -o-transform: translateY(-7em);
+            transform: translateY(-7em);
+        }
+        img {
+            -webkit-transform: scale(1.2, 1.2);
+            -moz-transform: scale(1.2, 1.2);
+            -ms-transform: scale(1.2, 1.2);
+            -o-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+        }
+    }
+}//figure
+    
+    
+    
 }
 
-
-
-
-
-
-
-
-
-
-
-
-// .container {
-//     position: relative;
-//     width: 260px;
-//     margin: 10em auto;
-//     padding: 0;
-//     transition: transform 1s ease;
-//     transform-style: preserve-3d; //important
-    
-//     .back-face {
-//         position: absolute;
-//         width: 100%;
-//         margin: 0;
-//         padding: 0;
-//         transition: transform;
-//         transform: rotateY(180deg);
-//         backface-visibility: hidden;
-//         color: #fff;
-//         p {
-//             position: relative;
-//             text-align: center;
-//             font-size: 13px;
-//             line-height: 20px;
-//             padding-top: 5px;
-//             color: $grey;
-//         }
-//         h4 {
-//              text-align: center;
-//              bottom: 0;
-//              margin: 5px auto;
-//              width: 35%;
-//              border-radius: 3px;
-//              background: $btn;
-//              color: #fff;
-//              padding: 8px;
-//              text-transform: uppercase;
-//              font-weight: 500;
-//              font-size: 13px;
-//              box-shadow: 0px 2px 1px #000;
-             
-            
-//              &:hover {
-//                 background: $btn + 20; 
-//              }
-//         }
-//     }
-    
-  
-    
-//     .front-face {
-//         position: absolute;
-//         display: table;
-//         width: 100%;
-//         height: 100%;
-//             // border: 1px solid;
-//         margin: 0;
-//         padding: 0;
-//         backface-visibility: hidden;
+.upper-footer {
+    background-color: $main-color;
+    min-height: 250px;
+    max-height: 250px;
+    .row {
+        padding-top: 10px;
+        #logo-footer {
+        background-color: white;
+        width: 200px;
+        padding: 5px;
         
-//         .fa {
-//             font-size: 5em;
-//             text-align: center;
-//             display: block;
-//             color: $btn;
-//             text-shadow: 1px 1px 1px #000;
-//         }
-        
-//         h4 {
-//             text-align: center;
-//             color: $grey;
-//             margin-top: 15px;
-//         }
-//     }
-//      &:hover {
-//         transform: rotateY(180deg);
-//     }
-// }
+    }
+    h3 {
+            color: white;
+        }
+    }
+    
+}
+.lower-footer {
+    background-color: $main-color - 50;
+    min-height: 20px;
+    max-height: 20px;
+    #map {
+        display: block;
+    }
+    p {
+        margin: 0px; 
+        color: white;
+        font-weight: 600;
+        i {
+            padding-right: 5px;
+        }
+    }
+    .right p {
+        float: right;
+    }
+}
+/* CSS */
 
-
-
-
-
-
+}

@@ -14,19 +14,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>OTMEN Arquitectura SLP</title>
     <link href="css/style.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/OTMEN.png" type="image/png" />
+    <link rel="shortcut icon" href="images/short.png" type="image/png" />
 
 </head>
-  
+ 
 <body>
   
   <header>
   	<div class="top-header">
   	    <div class="wrapper">
-  	        <img src="images/logo.png"></img>
+  	        <img id="logo" src="images/unnamed.png"></img>
   	        <ul class="navmenu">
-                <li><a href="Home">Home</a></li>
-                <li><a href="Sectores">Sectores</a>
+                <li id="home"><a href="Home"><i class="fa fa-home"></i></a></li>
+                <li><a href="Sectores">Sectors</a>
                     <ul class="sub1">
                         <li><a href="#">Sector 1</a></li>
                         <li><a href="#">Sector 2</a></li>
@@ -34,27 +34,35 @@
                         <li><a href="#">Sector 4</a></li>
                     </ul>
                 </li>
-                <li><a href="Proyectos">Proyectos</a>
+                <li><a href="Proyectos">Projectes</a>
                     <ul class="sub2">
-                        <li><a href="#">Proyecto 1</a></li>
-                        <li><a href="#">Proyecto 2</a></li>
-                        <li><a href="#">Proyecto 3</a></li>
-                        <li><a href="#">Proyecto 4</a></li>
-                        <li><a href="#">Proyecto 5</a></li>
+                        <li><a href="#">Projecte 1</a></li>
+                        <li><a href="#">Projecte 2</a></li>
+                        <li><a href="#">Projecte 3</a></li>
+                        <li><a href="#">Projecte 4</a></li>
+                        <li><a href="#">Projecte 5</a></li>
                     </ul>
                 </li>
-                <li><a href="Contacto">Contacto</a></li>
+                <li><a href="Contacto">Contacte</a></li>
   	        </ul>
   	    </div> 
   	</div>
   	<div class="info-header">
   	    <div class="wrapper">
-      	    <div class="row">
+      	    <div class="row hidden-xs">
                 <div class="col-md-6 col-sm-6 col-xs-6">
-  	                <a href="tel:+644030890"><i class="fa fa-phone">Trucan's</i></a>
+  	                <a href="tel:+644030890"><i class="fa fa-phone"></i>Trucan's al 644030890</a>
                 </div>
                 <div class="right col-md-6 col-sm-6 col-xs-6">
-                    <a href="https://www.google.es/maps/place/Jesu%C3%AFtes+El+Clot/@41.4127087,2.1903506,18.5z/data=!4m2!3m1!1s0x0000000000000000:0x8a22bf1df6194fbd"><i class="fa fa-map-marker">La nostra Ubicació</i></a>
+                    <a href="https://www.google.es/maps/place/Jesu%C3%AFtes+El+Clot/@41.4127087,2.1903506,18.5z/data=!4m2!3m1!1s0x0000000000000000:0x8a22bf1df6194fbd"><i class="fa fa-map-marker"></i>La nostra Ubicació al Carrer València 610 1r 2ª</a>
+                </div>
+            </div>
+            <div class="row hidden-sm hidden-md hidden-lg">
+                <div class="col-xs-6">
+  	                <a href="tel:+644030890"><i class="fa fa-phone"></i>Trucan's</a>
+                </div>
+                <div class="right col-xs-6">
+                    <a href="https://www.google.es/maps/place/Jesu%C3%AFtes+El+Clot/@41.4127087,2.1903506,18.5z/data=!4m2!3m1!1s0x0000000000000000:0x8a22bf1df6194fbd"><i class="fa fa-map-marker"></i>La nostra Ubicació</a>
                 </div>
             </div>
   	    </div> 
@@ -63,7 +71,7 @@
   
   <aside>
       <div class="row hidden-xs"><div class="col-md-12 xs-hidden"><a href="tel:+644030890"><i class="fa fa-phone"></i></a></div></div>
-      <div class="row hidden-xs"><div class="col-md-12 xs-hidden"><a href="tel:+644030890"><i class="fa fa-map-marker"></i></a></div></div>
+      <div class="row hidden-xs"><div class="col-md-12 xs-hidden"><a href="https://www.google.es/maps/place/Jesu%C3%AFtes+El+Clot/@41.4127087,2.1903506,18.5z/data=!4m2!3m1!1s0x0000000000000000:0x8a22bf1df6194fbd"><i class="fa fa-map-marker"></i></a></div></div>
   </aside>
   
   <section class="main-banner">
@@ -71,18 +79,157 @@
   </section>
   
   <section class="sectores">
-        <div class="wrapper"></div>
-        SECTORS
+        <div class="wrapper">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="container clearefix">
+                        <figure class="front-face">
+                            <i class="fa fa-building-o"></i>
+                            <h4>EDIFICACIONS</h4>
+                        </figure>
+                        <figure class="back-face">
+                            <a href="#">
+                                <p>Fes un cop d'ull als nostres magnífics projectes fets realitat</p>
+                                <h4 class="title">Veure més</h4>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="container">
+                        <figure class="front-face">
+                            <i class="fa fa-university"></i>
+                            <h4>OBRA CIVIL</h4>
+                        </figure>
+                        <figure class="back-face">
+                           <a href="#">
+                                <p>Cras sem erat, aliquet in egestas cursus, ullamcorper ullamcorper ullamcorper ullamcorpervitae ligula.</p>
+                                <h4 class="title">Veure més</h4>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="container">
+                        <figure class="front-face">
+                            <i class="fa fa-connectdevelop"></i>
+                            <h4>URBANISME</h4>
+                        </figure>
+                        <figure class="back-face">
+                            <a href="#">
+                                <p>Cras sem erat, aliquet in egestas cursus, ullamcorper ullamcorper ullamcorper ullamcorpervitae ligula.</p>
+                                <h4 class="title">Veure més</h4>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="container">
+                        <figure class="front-face">
+                            <i class="fa fa-file-text-o"></i>
+                            <h4>TRAMITACIÓ ADMINISTRATIVA</h4>
+                        </figure>
+                        <figure class="back-face">
+                            <a href="#">
+                                <p>Cras sem erat, aliquet in egestas cursus, ullamcorper ullamcorper ullamcorper ullamcorpervitae ligula.</p>
+                                <h4 class="title">Veure més</h4>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!--end-row-->
+        </div>
+        <!--end-wrapper-->
   </section>
   
   <section class="proyectos">
-      <div class="wrapper"></div>
-      PROYECTOS
+      <div class="wrapper">
+            <div class="row">
+                <div class="p0 col-xs-12 col-sm-6 col-md-3">
+                    <figure>
+                        <img src="images/cerdanyola.jpg"></img>
+                        <figcaption><span>Rehabilitació d'una Casa Noucentista a Barcelona</span></figcaption>
+                    </figure>
+                </div>
+                <div class="p0 col-xs-12 col-sm-6 col-md-3">
+                    <figure>
+                        <img src="images/banner1.jpg"></img>
+                        <figcaption><span>Penes para el Inge</span></figcaption>
+                    </figure>
+                </div>
+                <div class="p0 col-xs-12 col-sm-6 col-md-3">
+                    <figure>
+                        <img src="images/banner1.jpg"></img>
+                        <figcaption><span>Penes para el Inge</span></figcaption>
+                    </figure>
+                </div>
+                <div class="p0 col-xs-12 col-sm-6 col-md-3">
+                    <figure>
+                        <img src="images/banner1.jpg"></img>
+                        <figcaption><span>Penes para el Inge</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <figure>
+                        <img src="images/banner1.jpg"></img>
+                        <figcaption><span>Penes para el Inge</span></figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <figure>
+                        <img src="images/banner1.jpg"></img>
+                        <figcaption><span>Penes para el Inge</span></figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <figure>
+                        <img src="images/banner1.jpg"></img>
+                        <figcaption><span>Penes para el Inge</span></figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <figure>
+                        <img src="images/banner1.jpg"></img>
+                        <figcaption><span>Penes para el Inge</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+      </div>
+      
   </section>
   
-   <footer>
-  	<div class="wrapper"></div>
-  	FOOTER
+   <footer class="upper-footer">
+  	<div class="wrapper">
+  	  	<div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="row"><div class="col-md-12"><img id="logo-footer" src="images/unnamed.png"></img></div></div>
+                <div class="row"><div class="col-md-12"><h3>Aquí va una frase que inspira i fa pensar</h3></div></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="row"><div class="col-md-12"><h3>Mapa Web</h3></div></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="row"><div class="col-md-12"><img id="logo-footer" src="images/unnamed.png"></img></div></div>
+            </div>
+        </div>
+  	</div>
+  	  	
+  </footer>
+  
+  <footer class="lower-footer">
+  	<div class="wrapper">
+  	    <div class="col-md-6 col-sm-6 col-xs-12">
+            <p><i class="fa fa-copyright"></i>2015 OTMEN ARQUITECTURA SLP</p>
+        </div>
+  	    
+  	    <div class="right col-md-6 col-sm-6 hidden-xs">
+            <p>All Rights Reserved</p>
+        </div>
+  	</div>
   </footer>
   
 </body>
